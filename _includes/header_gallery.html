@@ -1,0 +1,44 @@
+
+<section>
+
+  {% assign tot = 0 %}
+  {% for post in site.posts %}
+    {% if post.photography == true %}
+      {% assign tot = tot | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+  {% assign col_w = 12 | divided_by: tot %}
+
+  <div class="container mt-3 mb-4">
+    <div class="container-fluid p-sm-0">
+      <div class="row featured-post-slider">
+        {% for post in site.posts %}
+        {% if post.photography == true %}
+        <div class="col-lg-{{col_w}} col-sm-{{col_w}} mb-2 mb-lg-0 px-1">
+          <article class="card bg-dark text-center text-white border-0 rounded-0">
+            {% if post.title == page.title %}
+              <img class="card-img rounded-0 img-fluid w-100" src="{{post.image_active | relative_url}}" alt="{{post.title}}">
+            {% else %}
+            <img class="card-img rounded-0 img-fluid w-100" src="{{post.image | relative_url}}" alt="{{post.title}}">
+            {% endif %}
+            <a class="text-white" href="{{ post.url | relative_url }}"><div class="card-img-overlay">
+              <div class="card-content">
+                {% if post %}
+                  {% assign categories = post.categories %}
+                {% else %}
+                {% assign categories = page.categories %}
+                {% endif %}
+                {% for category in categories %}
+<!--                <p class="text-uppercase">{{category}}</p>-->
+                {% endfor %}
+                <h4 class="card-title mb-4">{{post.title}}</h4>
+              </div>
+            </div></a>
+          </article>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

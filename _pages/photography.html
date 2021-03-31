@@ -1,0 +1,28 @@
+---
+layout: gallery
+title: Photography
+permalink: /photography/
+image: /assets/images/contact.jpg
+---
+
+
+<p>
+</p>
+
+{% for post in site.posts %}
+    {% if post.photography == true %}
+
+        <div class="container-fluid p-sm-0">
+            <div class="row featured-post-slider">
+                {% for img in post.files %}
+                <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
+                  <article class="card bg-dark text-center text-white border-0 rounded-0">
+                    <img class="card-img rounded-0 img-fluid w-100" src="{{img.path | relative_url}}" alt="{{cat.title}}">
+                  </article>
+                </div>
+                {% endfor %}
+            </div>
+          </div>
+
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,161 @@
+#-------------------------------
+# General Site Settings
+baseurl: "" # The subpath of your site, e.g. /blog
+url: "" # The base hostname & protocol for your site, e.g. http://example.com
+
+title: Joe Vega Photography
+logo: /assets/images/logo.png # You can add own logo
+description: # Add your awesome description
+copyright: Copyright 2021 by Joe Vega
+# Preloader
+preloader: false # To disable preloader change value to false
+
+menu:
+  - name: Home
+    url: /
+  - name: Photography
+    url: /photography/
+#    submenu:
+#      - name: Boudoir
+#        url: /photography/?cat=boudoir/
+#      - name: Erotica
+#        url: /photography/erotica/
+#  - name: writings
+#    url: /writings/
+  - name: Collaborations
+    url: /info/
+    submenu:
+      - name: Collaborations
+        url: /shooting/
+      - name: Hired Services
+        url: /shooting/#hired-services
+      - name: Values & Vision
+        url: /shooting/#values
+      - name: Session Types
+        url: /shooting/#session-types
+      - name: Preparing for a session
+        url: /shooting/#preparing-session
+      - name: Testimonials
+        url: /shooting/#testimonials
+  - name: Uncensored Content
+    url: /content/
+#  - name: Adult Lifestyle
+#    url: /lifestyle/
+#  - name: Shoot with Joe
+#    url: /shooting/
+  - name: About
+    url: /about/
+    submenu:
+      - name: Joe
+        url: /about/
+      - name: FAQ
+        url: /faq/
+#      - name: Adult Lifestyle
+#        url: /lifestyle/
+  - name: Contact
+    url: /contact/
+
+# *** NOTE ***
+# You can add submenus. For example:
+
+#  menu:
+#  - name: Home
+#    url: /
+#    submenu:
+#     - name: Peru
+#       url: /peru/
+# ----------------------------------
+
+layout_home_page: true # Homepage layout ( two layout is available, you can set the another layout by change the value of layout_home_page "true" to "false")
+
+featured-post-slider: false # You can enable or disable the featured-post-slider using true or false values.
+blogs_in_first_page: false # You can enable blogs in first page using true or false values.
+
+# My Collections
+collections:
+  - photos
+
+#-------------------------------
+# Hero Section
+hero:
+  hero-subtitle: I’m a Freelance Interactive Art Director based in France. Focusing across branding and identity, digital and print.
+  hero-banner: /assets/images/banner-img.png # Add your banner image '/assets/images/'
+
+#-------------------------------
+# Author Settings
+author:
+  name: Joe Vega
+
+#-------------------------------
+# Contact Info
+contact:
+  email: joevegaphotography@gmail.com
+  address:
+    city: Austin, Texas
+    country: United States
+
+# Contact Form
+contact-form: xknkwleb
+
+# Social links
+social:
+- {icon: "ti-facebook", link: "#"}
+- {icon: "ti-twitter-alt", link: "#"}
+- {icon: "ti-instagram-alt", link: "#"}
+#- {icon: "ti-linkedin", link: "#"}
+#- {icon: "ti-github", link: "#"}
+
+#-------------------------------
+# Comment Section (Disqus)
+disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
+
+#-------------------------------
+# Instagram Feed
+instafeed: true # To enable the instafeed, use the value true. To turn off use the value false.
+userID: 4044026246
+accessToken: 4044026246.1677ed0.8896752506ed4402a0519d23b8f50a17
+
+#-------------------------------
+# Google Analytics
+google-analytics: # Add your identifier. For example UA-99631805-1.
+
+#-------------------------------
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll/tagging
+  - jekyll-archives
+
+paginate: 10
+paginate_path: "/page/:num"
+
+# Pages Path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+include:
+  - _pages
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  pretty
+
+# categories
+jekyll-archives:
+  enabled: all
+  layout: category
+  permalinks:
+    category: '/category/:name/'
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor

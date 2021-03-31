@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head_gallery.html %}
+
+<body>
+  {% if site.google-analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
+
+  {% if site.preloader == true %}
+  <!-- preloader -->
+  <div class="preloader">
+    <div class="loader">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- /preloader -->
+  {% endif %}
+
+  {% include header.html %}
+
+  {% include header_gallery.html %}
+
+  <section>
+    <div class="container mb-5">
+
+<!--    <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">-->
+<!--      <span style="font-size: 40px; background-color: #F3F5F6; padding: 0 10px;">-->
+<!--        <h2 class="mb-4"></h2>-->
+<!--      </span>-->
+<!--    </div>-->
+
+      <h2 class="text-divider"><span>{{ page.title | escape }}</span></h2>
+
+
+      {{ content }}
+
+      <div class="container-fluid p-sm-0">
+        <div class="row featured-post-slider">
+            {% for img in page.files %}
+            <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
+              <article class="card bg-dark text-center text-white border-0 rounded-0">
+                <img class="card-img rounded-0 img-fluid w-100" src="{{img.path | relative_url}}" alt="{{cat.title}}">
+              </article>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  {% include footer.html %}
+
+<!--  &lt;!&ndash; jQuery &ndash;&gt;-->
+<!--  <script src="{{ site.baseurl }}/assets/plugins/jQuery/jquery.min.js"></script>-->
+<!--  &lt;!&ndash; Bootstrap JS &ndash;&gt;-->
+<!--  <script src="{{ site.baseurl }}/assets/plugins/bootstrap/bootstrap.min.js"></script>-->
+<!--  &lt;!&ndash; slick slider &ndash;&gt;-->
+<!--  <script src="{{ site.baseurl }}/assets/plugins/slick/slick.min.js"></script>-->
+<!--  &lt;!&ndash; masonry &ndash;&gt;-->
+<!--  <script src="{{ site.baseurl }}/assets/plugins/masonry/masonry.js"></script>-->
+<!--  &lt;!&ndash; instafeed &ndash;&gt;-->
+<!--  <script src="{{ site.baseurl }}/assets/plugins/instafeed/instafeed.min.js"></script>-->
+<!--  &lt;!&ndash; smooth scroll &ndash;&gt;-->
+<!--  <script src="{{ site.baseurl }}/assets/plugins/smooth-scroll/smooth-scroll.js"></script>-->
+<!--  &lt;!&ndash; headroom &ndash;&gt;-->
+<!--  <script src="{{ site.baseurl }}/assets/plugins/headroom/headroom.js"></script>-->
+<!--  &lt;!&ndash; reading time &ndash;&gt;-->
+<!--  <script src="{{ site.baseurl }}/assets/plugins/reading-time/readingTime.min.js"></script>-->
+<!--  &lt;!&ndash; lunr.js &ndash;&gt;-->
+<!--  <script src="{{ site.baseurl }}/assets/plugins/search/lunr.min.js"></script>-->
+<!--  &lt;!&ndash; search &ndash;&gt;-->
+<!--  <script src="{{ site.baseurl }}/assets/plugins/search/search.js"></script>-->
+
+<!--  &lt;!&ndash; Main Script &ndash;&gt;-->
+<!--  <script src="{{ site.baseurl }}/assets/js/script.js"></script>-->
+</body>
+
+</html>

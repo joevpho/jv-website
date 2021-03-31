@@ -1,0 +1,46 @@
+---
+layout: page
+title: Contact Me
+permalink: /contact/
+image: /assets/images/photography/mabel-pearls-11-color.jpg
+---
+
+<h5>Have a Question?</h5>
+
+<p>chances are you can find the answer you're looking for on my <a href="/faq/">Frequently Asked Questions page</a></p>
+
+
+
+
+
+
+
+<h5 class="mt-5">Reach out!</h5>
+
+<p class="mt-2">
+  shoot me an email: joevegaphotography@gmail.com
+</p>
+
+<p>find me at one of the many social platforms!
+  <ul class="list-inline d-inline-block">
+    {% for social in site.social %}
+    <li class="list-inline-item"><a href="{{ social.link }}" class="text-dark"><i class="{{ social.icon }}"></i></a></li>
+    {% endfor %}
+  </ul>
+</p>
+<p>or use the form bellow...</p>
+
+<form action="https://formspree.io/f/{{ site.contact-form }}" method="POST" class="row">
+  <div class="col-lg-6">
+    <input type="text" class="form-control mb-4" name="name" id="name" placeholder="Name">
+  </div>
+  <div class="col-lg-6">
+    <input type="email" class="form-control mb-4" name="_replyto" id="email" placeholder="Email">
+  </div>
+  <div class="col-12">
+    <textarea name="message" id="message" class="form-control mb-4" placeholder="Message..."></textarea>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>
