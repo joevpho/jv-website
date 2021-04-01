@@ -1,10 +1,10 @@
 #-------------------------------
 # General Site Settings
 baseurl: "" # The subpath of your site, e.g. /blog
-url: "" # The base hostname & protocol for your site, e.g. http://example.com
+url: "https://joevegaphotography.com/" # The base hostname & protocol for your site, e.g. http://example.com
 
 title: Joe Vega Photography
-logo: /assets/images/logo.png # You can add own logo
+logo: /assets/images/logo.png # customize own logo
 description: # Add your awesome description
 copyright: Copyright 2021 by Joe Vega
 # Preloader
@@ -39,10 +39,6 @@ menu:
         url: /shooting/#testimonials
   - name: Uncensored Content
     url: /content/
-#  - name: Adult Lifestyle
-#    url: /lifestyle/
-#  - name: Shoot with Joe
-#    url: /shooting/
   - name: About
     url: /about/
     submenu:
@@ -50,8 +46,6 @@ menu:
         url: /about/
       - name: FAQ
         url: /faq/
-#      - name: Adult Lifestyle
-#        url: /lifestyle/
   - name: Contact
     url: /contact/
 
@@ -76,15 +70,11 @@ collections:
   - photos
 
 #-------------------------------
-# Hero Section
-hero:
-  hero-subtitle: I’m a Freelance Interactive Art Director based in France. Focusing across branding and identity, digital and print.
-  hero-banner: /assets/images/banner-img.png # Add your banner image '/assets/images/'
-
-#-------------------------------
 # Author Settings
 author:
   name: Joe Vega
+  subtitle:
+  banner: /assets/images/banner.png # Add your banner image
 
 #-------------------------------
 # Contact Info

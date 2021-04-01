@@ -89,20 +89,6 @@ layout: default
     </div>
   </div>
 
-<!--  <div class="row">-->
-<!--    <div class="col">-->
-<!--      <h4 class="title-border text-center">Shooting with Joe..</h4>-->
-<!--      <p>-->
-<!--        Hi, I’m Joe Vega, a boudoir, intimate lifestyle and erotic photographer based in Texas. Among many other things,-->
-<!--        I love to capture the unique beauty and sensual side of each one of my subjects, as well as freezing moments-->
-<!--        of intimacy and sensuality through my lenses. Body, sensuality and sexuality are not a taboo and everyone-->
-<!--        should be able to explore themselves and their sexuality, free of judgment and in a positive way.-->
-<!--      </p>-->
-<!--    </div>-->
-<!--  </div>-->
-
-
-
 </div>
 </section>
 
@@ -194,7 +180,7 @@ layout: default
         <div class="col-lg-6 align-self-end">
           <h1 class="mb-0">Welcome</h1>
           <h2 class="mb-100 title-border-lg">to <i>{{site.author.name}} Blog</i></h2>
-          <p class="mb-80 mr-5">{{site.hero.hero-subtitle}}</p>
+          <p class="mb-80 mr-5">{{site.author.subtitle}}</p>
           <span class="font-secondary text-dark mr-3 mr-sm-5">Follow</span>
           <ul class="list-inline d-inline-block mb-5">
             {% for social in site.social %}
@@ -203,7 +189,7 @@ layout: default
           </ul>
         </div>
         <div class="col-lg-6 text-right">
-          <img class="img-fluid" src="{{site.hero.hero-banner | relative_url }}" alt="banner-image">
+          <img class="img-fluid" src="{{site.author.banner | relative_url }}" alt="banner-image">
         </div>
       </div>
     </div>

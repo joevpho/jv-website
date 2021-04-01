@@ -4,7 +4,7 @@ title: "Hired Services"
 title_long: "Hired Services"
 date: 2020-06-12 14:46:10 +03:00
 uid: hired-services
-description: "I'm always looking forward to meeting other content creators to collaborate with."
+description: ""
 image: "assets/images/photography/saints_s.jpg"
 permalink: /shooting/#hired-services
 photography: false
