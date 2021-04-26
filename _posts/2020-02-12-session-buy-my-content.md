@@ -24,7 +24,7 @@ files:
   
 ---
 
-Onlyfans is the easiest way to access my uncensored photography shoots, writings, 
+OnlyFans is the easiest way to access my uncensored photography shoots, writings, 
 content with lifestyle and kink communities experiences, as well as unedited pictures
 and some behind the scene. 
 
